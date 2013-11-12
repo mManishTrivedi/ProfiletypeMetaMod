@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="module" client="site" method="upgrade">
+	<name>ProfileType MetaMod</name>
+	<author>Team Readybytes</author>
+	<creationDate>12Nov 2013</creationDate>
+	<copyright>Copyright (C) 2008. All rights reserved.</copyright>
+	<license>http://www.readybytes.net</license>
+	<authorEmail>manish@readybytes.in</authorEmail>
+	<authorUrl>www.readybytes.net</authorUrl>
+	<version>1.0</version>
+	<description>Control your modules as per profiletypes.</description>
+	
+	<files>
+		<file module="mod_profiletypemetamod">mod_profiletypemetamod.php</file>
+		<file>helper.php</file>
+		<folder>elements</folder>
+	</files>
+	
+	<!-- for J1.6+ -->
+	<config>
+		
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/modules/mod_profiletypemetamod/elements/">
+				<field name="profiletypemodule" type="profiletypemodule" default="" label="Module" description="Select module to control by Profile-Type" />
+				<field name="xiprofiletypes" type="xiptprofiletypes" default="" label="Profile-Types" description="Select corresponding XiPT profiletypes" multiple="multiple"/>
+			</fieldset>
+			
+			<fieldset name="advanced">
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="Module Class Suffix"
+					description="A suffix to be applied to the CSS class of the module. This allows for individual module styling." />
+			</fieldset>
+		</fields>
+		
+	</config>
+
+</extension>
